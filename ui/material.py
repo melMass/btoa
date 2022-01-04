@@ -67,6 +67,9 @@ class ARNOLD_MATERIAL_PT_context_material(MaterialButtonsPanel, Panel):
             split.template_ID(space, "pin_id")
             split.separator()
 
+        if not mat.arnold.node_tree:
+            layout.operator("arnold.material_init")
+            return
 class ARNOLD_MATERIAL_PT_surface(MaterialButtonsPanel, Panel):
     bl_label = "Surface"
 
