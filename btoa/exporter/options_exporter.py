@@ -9,7 +9,7 @@ class OptionsExporter(Exporter):
     def export(self, interactive=False):
         scene = self.cache.scene
         render = self.cache.render
-        
+
         options = UniverseOptions()
 
         x, y = export_utils.get_render_resolution(self.cache, interactive=interactive)
@@ -22,7 +22,7 @@ class OptionsExporter(Exporter):
             max_y = int(math.ceil(y * (1 - render["border_min_y"])))
 
             options.set_render_region(min_x, min_y, max_x, max_y)
-        
+
         options.set_int("render_device", int(scene["render_device"]))
 
         options.set_int("AA_samples", scene["aa_samples"])
@@ -38,7 +38,7 @@ class OptionsExporter(Exporter):
 
         options.set_bool("enable_adaptive_sampling", scene["use_adaptive_sampling"])
         options.set_int("AA_samples_max", scene["adaptive_aa_samples_max"])
-        options.set_float("adaptive_threshold", scene["adaptive_threshold"])
+        options.set_float("AA_adaptive_threshold", scene["adaptive_threshold"])
 
         if scene["aa_seed"] > 0:
             options.set_int("AA_seed", scene["aa_seed"])

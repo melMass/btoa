@@ -260,7 +260,7 @@ class PolymeshExporter(ObjectExporter):
         self.node.set_float("subdiv_adaptive_error", data.subdiv_adaptive_error)
         self.node.set_string("subdiv_adaptive_metric", data.subdiv_adaptive_metric)
         self.node.set_string("subdiv_adaptive_space", data.subdiv_adaptive_space)
-        self.node.set_bool("subdiv_frustrum_ignore", data.subdiv_frustrum_ignore)
+        self.node.set_bool("subdiv_frustum_ignore", data.subdiv_frustrum_ignore)
         self.node.set_string("subdiv_uv_smoothing", data.subdiv_uv_smoothing)
         self.node.set_bool("subdiv_smooth_derivs", data.subdiv_smooth_derivs)
 
